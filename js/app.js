@@ -8,7 +8,7 @@ const searchMobile = () => {
         document.getElementById('empty-text-msg').style.display = 'block';
     }
     else{
-        // load data
+    // load data
     const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
     fetch(url)
         .then( res => res.json())
@@ -19,13 +19,14 @@ const searchMobile = () => {
 
 // all search result & display in UI
 const mobileSearchResult = mobiles => {
+    const mobilesAmount = mobiles.slice(0,20);
     const searchResult = document.getElementById('search-result');
     searchResult.textContent = '';
-    if (mobiles.length == 0){
+    if (mobilesAmount.length == 0){
         document.getElementById('not-found-msg').style.display = 'block';
     }
     else{
-         mobiles.forEach ( mobile => {
+        mobilesAmount.forEach ( mobile => {
         console.log(mobile);
         const div = document.createElement('div');
         div.classList.add('col');
