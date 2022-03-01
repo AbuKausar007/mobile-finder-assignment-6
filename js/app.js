@@ -3,13 +3,17 @@ const searchMobile = () => {
     const searchText = searchField.value;
     // clear data
     searchField.value = '';
-
-    // load data
+    if( searchText == ''){
+        document.getElementById('empty-text-msg').style.display = 'block';
+    }
+    else{
+        // load data
     const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
     fetch(url)
         .then( res => res.json())
         .then( data => mobileSearchResult(data.data));
-        
+        document.getElementById('empty-text-msg').style.display = 'none';
+    }    
 }
 
 // all search result & display in UI
