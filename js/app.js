@@ -3,8 +3,9 @@ const searchMobile = () => {
     const searchText = searchField.value;
     // clear data
     searchField.value = '';
-    const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
+
     // load data
+    const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
     fetch(url)
         .then( res => res.json())
         .then( data => mobileSearchResult(data.data));
@@ -15,7 +16,12 @@ const searchMobile = () => {
 const mobileSearchResult = mobiles => {
     const searchResult = document.getElementById('search-result');
     searchResult.textContent = '';
-    mobiles.forEach ( mobile => {
+    if (mobiles.length == 0){
+        document.getElementById('not-found-msg').style.display = 'block';
+    }
+    else{
+         mobiles.forEach ( mobile => {
+        console.log(mobile);
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
@@ -29,7 +35,10 @@ const mobileSearchResult = mobiles => {
         </div>
         `;
         searchResult.appendChild(div);
+        document.getElementById('not-found-msg').style.display = 'none';
     })
+    }
+   
 }
 
 // search single details 
@@ -49,13 +58,13 @@ const displayMobileDetail = mobile => {
     const div = document.createElement('div');
     div.innerHTML = `
     <div class="row rounded-3 shadow-lg py-4 mt-5">
-                <div class="col-lg-4 text-center ">
+                <div class="col-lg-4 cols-12 text-center ">
                     <img src="${mobile.image}" class="img-fluid" alt="">
                     <h3 class="mt-2 fw-bold blue-color">${mobile.name}</h3> 
                     <h4 class=" orange-color">(Product of ${mobile.brand})</h4>
                     <h6>${mobile.releaseDate}</h6>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-8 cols-12">
                     <div class="row pe-4 justify-content-between">
                         <div class="col-lg-4 rounded-3 shadow">
                             <h3 class="blue-color fw-bold">Some Basic Information.</h3>
