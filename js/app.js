@@ -3,6 +3,7 @@ const searchMobile = () => {
     const searchText = searchField.value;
     // clear data
     searchField.value = '';
+    
     if( searchText == ''){
         document.getElementById('empty-text-msg').style.display = 'block';
     }
@@ -59,6 +60,7 @@ const loadMobileDetail = mobileId => {
 const displayMobileDetail = mobile => {
     console.log(mobile);
     const mobileDetails = document.getElementById('mobile-details');
+    mobileDetails.textContent = '';
     const div = document.createElement('div');
     div.innerHTML = `
     <div class="row rounded-3 shadow-lg py-4 mt-5">
@@ -66,7 +68,7 @@ const displayMobileDetail = mobile => {
                     <img src="${mobile.image}" class="img-fluid" alt="">
                     <h3 class="mt-2 fw-bold blue-color">${mobile.name}</h3> 
                     <h4 class=" orange-color">(Product of ${mobile.brand})</h4>
-                    <h6>${mobile.releaseDate}</h6>
+                    <h6>${mobile.releaseDate? mobile.releaseDate: 'Release Date Not Found.'}</h6>
                 </div>
                 <div class="col-lg-8 cols-12">
                     <div class="row pe-4 justify-content-between">
