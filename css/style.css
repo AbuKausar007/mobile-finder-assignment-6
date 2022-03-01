@@ -4,7 +4,7 @@ body{
     sans-serif;
 }
 
-.text-color{
+.blue-color {
     color: #183153;
 }
 .text-color2{
@@ -20,4 +20,8 @@ body{
     background-color: #183153;
     color: white;
     border-radius: 20px;
+}
+.input-field{
+    border-radius: 20px;
+    border: 1px solid #183153;
 }

@@ -15,17 +15,55 @@
 <body>
     <header>
         <section class="text-center mt-4 mb-4">
-            <h1 class="fw-bold text-color">Welcome To <span class="orange-color">Mobile Finder!</span></h1>
+            <h1 class="fw-bold blue-color">Welcome To <span class="orange-color">Mobile Finder!</span></h1>
             <p class="fs-4 fw-normal text-color">Search Your Desire Mobile <i class="fa-solid fa-mobile-screen-button"></i></p>
         </section>
     </header>
     <main>
+        <!-- search box -->
         <section class="container text-center w-50 mt-3 ">
             <div class="input-group mb-3 ">
-                <input id="search-field" type="text" class="form-control " placeholder="Search your mobile..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                <input id="search-field" type="text" class="form-control input-field" placeholder="Search your mobile..." aria-label="Recipient's username" aria-describedby="button-addon2">
                 <button onclick="searchMobile()" id="search-button" class="btn btn-outline-secondary" type="button">Search</button>
             </div>
         </section>
+        <!-- single details -->
+        <section id="mobile-details" class="container">
+            <!-- <div class="row">
+                <div class="col-lg-6 text-center">
+                    <img src="" alt="">
+                    <h3>Device Name: </h3> 
+                    <span>( Product of  )</span>
+                    <h4>Release Date:</h4>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h3>Basic Information.</h3>
+                            <p>Chipset: </p>
+                            <p>Memory: </p>
+                            <p>Storage: </p>
+                            <p>Display Size: </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <h3>About Sensor.</h3>
+                            <p>Chipset: </p>
+                            <p>Memory: </p>
+                            <p>Storage: </p>
+                            <p>Display Size: </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <h3>Others Details.</h3>
+                            <p>Chipset: </p>
+                            <p>Memory: </p>
+                            <p>Storage: </p>
+                            <p>Display Size: </p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+        <!-- search result -->
         <section class="container mt-5">
             <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
                 
