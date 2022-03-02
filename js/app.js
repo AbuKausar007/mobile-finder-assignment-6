@@ -94,11 +94,11 @@ const displayMobileDetail = mobile => {
                         </div>
                         <div class="col-lg-4 col-12 sm-gap rounded-3 shadow">
                             <h3 class="blue-color fw-bold">Others Information.</h3>
-                            <p><span class="fw-bold orange-color">Bluetooth:</span> ${mobile.others.Bluetooth}</p>
-                            <p><span class="fw-bold orange-color">WLAN:</span> ${mobile.others.WLAN}</p>
-                            <p><span class="fw-bold orange-color">USB:</span> ${mobile.others.USB}</p>
-                            <p><span class="fw-bold orange-color">GPS:</span> ${mobile.others.GPS}</p>
-                            <p><span class="fw-bold orange-color">Radio:</span> ${mobile.others.Radio}</p>
+                            <p><span class="fw-bold orange-color">Bluetooth:</span> ${mobile?.others?.Bluetooth? mobile.others.Bluetooth: 'Not Found'}</p>
+                            <p><span class="fw-bold orange-color">WLAN:</span> ${mobile?.others?.WLAN? mobile.others.WLAN: 'Not Found'}</p>
+                            <p><span class="fw-bold orange-color">USB:</span> ${mobile?.others?.USB? mobile.others.USB: 'Not Found' }</p>
+                            <p><span class="fw-bold orange-color">GPS:</span> ${mobile?.others?.GPS? mobile.others.GPS: 'Not Found'}</p>
+                            <p><span class="fw-bold orange-color">Radio:</span> ${mobile?.others?.Radio? mobile.others.Radio: 'Not Found'}</p>
                         </div> 
                         <div class=" col-lg-4 col-12 sm-gap rounded-3 shadow">
                             <h3 class="blue-color fw-bold">Sensor Information.</h3>
