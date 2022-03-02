@@ -34,7 +34,6 @@ body{
 /* #see-all-device{
     display: none;
 } */
-
 /* ------------------------------media queary for small device----------------------------- */
 @media only screen and ( min-width: 1px) and (max-width: 576px){
     .width-for-sm {

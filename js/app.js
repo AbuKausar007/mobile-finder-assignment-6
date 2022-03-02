@@ -113,6 +113,5 @@ const displayMobileDetail = mobile => {
                 </div>
             </div>
     `;
-    mobileDetails.appendChild(div);
-    
+    mobileDetails.appendChild(div);    
 }
