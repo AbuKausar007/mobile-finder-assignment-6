@@ -22,6 +22,8 @@ const mobileSearchResult = mobiles => {
     const mobilesAmount = mobiles.slice(0,20);
     const searchResult = document.getElementById('search-result');
     searchResult.textContent = '';
+    const mobileDetails = document.getElementById('mobile-details');
+    mobileDetails.textContent = '';
     if (mobilesAmount.length == 0){
         document.getElementById('not-found-msg').style.display = 'block';
     }
@@ -101,4 +103,5 @@ const displayMobileDetail = mobile => {
             </div>
     `;
     mobileDetails.appendChild(div);
+    
 }
