@@ -6,6 +6,14 @@ const searchMobile = () => {
     
     if( searchText == ''){
         document.getElementById('empty-text-msg').style.display = 'block';
+        // clearing old serach result when again click for empty text.
+        const searchResult = document.getElementById('search-result');
+        searchResult.textContent = '';
+        // clearing old not found message
+        document.getElementById('not-found-msg').style.display = 'none';
+        // clearing old mobile details data 
+        const mobileDetails = document.getElementById('mobile-details');
+        mobileDetails.textContent = '';
     }
     else{
     // load data
@@ -19,9 +27,11 @@ const searchMobile = () => {
 
 // all search result & display in UI
 const mobileSearchResult = mobiles => {
+    // showing only first 20 devices
     const mobilesAmount = mobiles.slice(0,20);
     const searchResult = document.getElementById('search-result');
     searchResult.textContent = '';
+    // old mobile details data clearing
     const mobileDetails = document.getElementById('mobile-details');
     mobileDetails.textContent = '';
     if (mobilesAmount.length == 0){
@@ -66,7 +76,7 @@ const displayMobileDetail = mobile => {
     mobileDetails.textContent = '';
     const div = document.createElement('div');
     div.innerHTML = `
-    <div class="row rounded-3 shadow-lg py-4 mt-5">
+        <div class="row rounded-3 shadow-lg py-4 mt-5">
                 <div class="col-lg-4 cols-12 text-center ">
                     <img src="${mobile.image}" class="img-fluid" alt="">
                     <h3 class="mt-2 fw-bold blue-color">${mobile.name}</h3> 
