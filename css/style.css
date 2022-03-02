@@ -3,7 +3,7 @@ body{
     font-family: 'Poppins',
     sans-serif;
 }
-
+/* -------------------------------common styles------------------------------ */
 .blue-color {
     color: #183153;
 }
@@ -34,6 +34,9 @@ body{
 
 /* ------------------------------media queary for small device----------------------------- */
 @media only screen and ( min-width: 1px) and (max-width: 576px){
+    .width-for-sm {
+        width: 80%!important;
+    }
     .sm-device{
         display: flex;
         margin: 0;
@@ -48,5 +51,8 @@ body{
         padding: 10px 5px 5px 8px;
     }
 }
+
+
+
 
 
