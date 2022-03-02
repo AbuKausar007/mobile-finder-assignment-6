@@ -54,6 +54,7 @@ const mobileSearchResult = mobiles => {
         `;
         searchResult.appendChild(div);
         document.getElementById('not-found-msg').style.display = 'none';
+        // document.getElementById('see-all-device').style.display = 'block';
     })
     }
    
