@@ -7,14 +7,8 @@ body{
 .blue-color {
     color: #183153;
 }
-.text-color2{
-    color: #146ebe;
-}
-.orange-color{
+.orange-color {
     color: #fe6f27;
-}
-.deep-color{
-    color: #2f2f2f;
 }
 .btn{
     background-color: #183153;
@@ -54,4 +48,5 @@ body{
         padding: 10px 5px 5px 8px;
     }
 }
+
 
