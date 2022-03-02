@@ -47,7 +47,7 @@ const mobileSearchResult = mobiles => {
             <img class="w-75 mx-auto" src="${mobile.image}" class="card-img-top" alt="...">
         <div class="card-body">
             <h3 class="card-title fw-bold text-color">${mobile.phone_name}</h3>
-            <p class="brand-name text-color fw-bold fs-5">Brand: <span class="fw-normal">${mobile.brand}</span></p>
+            <p class="brand-name text-color fw-bold fs-5">Brand: <span class="fw-bold orange-color">${mobile.brand}</span></p>
             <button onclick="loadMobileDetail('${mobile.slug}')" id="details-button" class="btn py-2 px-4 fw-bold text-white rounded-5">See More</button>
         </div>
         </div>
@@ -84,15 +84,15 @@ const displayMobileDetail = mobile => {
                     <h6>${mobile.releaseDate? mobile.releaseDate: 'Release Date Not Found.'}</h6>
                 </div>
                 <div class="col-lg-8 cols-12">
-                    <div class="row pe-4 justify-content-between">
-                        <div class="col-lg-4 rounded-3 shadow">
+                    <div class=" sm-device row pe-lg-4 justify-content-between">
+                        <div class="col-lg-4 col-12 sm-gap rounded-3 shadow">
                             <h3 class="blue-color fw-bold">Some Basic Information.</h3>
                             <p><span class="fw-bold orange-color">Chipset:</span> ${mobile.mainFeatures.chipSet}</p>
                             <p><span class="fw-bold orange-color">Memory:</span> ${mobile.mainFeatures.memory}</p>
                             <p><span class="fw-bold orange-color">Storage:</span> ${mobile.mainFeatures.storage}</p>
                             <p><span class="fw-bold orange-color">Display Size:</span> ${mobile.mainFeatures.displaySize}</p>
                         </div>
-                        <div class="col-lg-4 rounded-3 shadow">
+                        <div class="col-lg-4 col-12 sm-gap rounded-3 shadow">
                             <h3 class="blue-color fw-bold">Others Information.</h3>
                             <p><span class="fw-bold orange-color">Bluetooth:</span> ${mobile.others.Bluetooth}</p>
                             <p><span class="fw-bold orange-color">WLAN:</span> ${mobile.others.WLAN}</p>
@@ -100,7 +100,7 @@ const displayMobileDetail = mobile => {
                             <p><span class="fw-bold orange-color">GPS:</span> ${mobile.others.GPS}</p>
                             <p><span class="fw-bold orange-color">Radio:</span> ${mobile.others.Radio}</p>
                         </div> 
-                        <div class=" col-lg-4 rounded-3 shadow">
+                        <div class=" col-lg-4 col-12 sm-gap rounded-3 shadow">
                             <h3 class="blue-color fw-bold">Sensor Information.</h3>
                             <p><span class="fw-bold orange-color">First Sensor:</span> ${mobile.mainFeatures.sensors[0]}</p>
                             <p><span class="fw-bold orange-color">Second Sensor:</span> ${mobile.mainFeatures.sensors[1]}</p>
